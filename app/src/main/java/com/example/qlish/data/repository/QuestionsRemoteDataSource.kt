@@ -1,4 +1,4 @@
-package com.example.qlish.data
+package com.example.qlish.data.repository
 
 import com.example.qlish.model.Question
 import kotlinx.coroutines.CoroutineDispatcher

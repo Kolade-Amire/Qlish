@@ -5,11 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.qlish.databinding.FragmentSignUpBinding
+import com.example.qlish.databinding.FragmentDailyTasksBinding
+import com.example.qlish.databinding.FragmentDashboardBinding
 
 
-class SignUpFragment : Fragment() {
-    private var _binding: FragmentSignUpBinding? = null
+class DailyTasksFragment : Fragment() {
+    private var _binding: FragmentDailyTasksBinding? = null
 
     private val binding get() = _binding!!
 
@@ -22,7 +23,7 @@ class SignUpFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentSignUpBinding.inflate(inflater, container, false)
+        _binding = FragmentDailyTasksBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

@@ -10,25 +10,45 @@
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" >
         <action
-            android:id="@+id/action_dashboardFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
-        <action
             android:id="@+id/action_dashboardFragment_to_takeATest2"
             app:destination="@id/takeATest" />
         <action
-            android:id="@+id/action_dashboardFragment_to_profileFragment2"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_dashboardFragment_to_wordOfTheDayFragment"
+            app:destination="@id/wordOfTheDayFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_testHistoryFragment"
+            app:destination="@id/testHistoryFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_progressOverviewFragment"
+            app:destination="@id/progressOverviewFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_dailyTipsFragment"
+            app:destination="@id/dailyTipsFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_dailyTasksFragment2"
+            app:destination="@id/dailyTasksFragment" />
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.example.qlish.ui.OnBoardingFragment"
         android:label="fragment_on_boarding"
-        tools:layout="@layout/fragment_on_boarding" />
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_onBoardingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.qlish.ui.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.qlish.ui.SettingsFragment"
@@ -53,4 +73,38 @@
             android:id="@+id/action_takeATest_to_testFragment"
             app:destination="@id/testFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.qlish.ui.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testHistoryFragment"
+        android:name="com.example.qlish.ui.TestHistoryFragment"
+        android:label="fragment_test_history"
+        tools:layout="@layout/fragment_test_history" />
+    <fragment
+        android:id="@+id/wordOfTheDayFragment"
+        android:name="com.example.qlish.ui.WordOfTheDayFragment"
+        android:label="fragment_word_of_the_day"
+        tools:layout="@layout/fragment_word_of_the_day" />
+    <fragment
+        android:id="@+id/dailyTipsFragment"
+        android:name="com.example.qlish.ui.DailyTipsFragment"
+        android:label="fragment_daily_tips"
+        tools:layout="@layout/fragment_daily_tips" />
+    <fragment
+        android:id="@+id/dailyTasksFragment"
+        android:name="com.example.qlish.ui.DailyTasksFragment"
+        android:label="fragment_daily_tasks"
+        tools:layout="@layout/fragment_daily_tasks" />
+    <fragment
+        android:id="@+id/progressOverviewFragment"
+        android:name="com.example.qlish.ui.ProgressOverviewFragment"
+        android:label="fragment_progress_overview"
+        tools:layout="@layout/fragment_progress_overview" />
 </navigation>

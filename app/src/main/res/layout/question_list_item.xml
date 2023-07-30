@@ -1,120 +1,297 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/question_card_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/logo_fill_four"
-        android:layout_margin="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+    android:backgroundTint="@color/logo_fill"
+    android:background="@color/logo_fill">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
+            android:layout_height="match_parent"
+            android:background="@color/logo_fill">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/question_text_card_view"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:minHeight="48dp"
-                app:cardBackgroundColor="@color/quill_gray"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="10dp"
-                app:layout_constraintBottom_toTopOf="@+id/options_card_view"
+                android:id="@+id/question_card"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/app_white"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toTopOf="@id/option_a_card"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0">
-
+                app:layout_constraintTop_toTopOf="parent" >
 
                 <TextView
-                    android:id="@+id/question_text"
-                    android:layout_width="match_parent"
+                    android:id="@+id/question_text_view"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:minHeight="48dp"
+
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ubuntu_mono"
+                    android:lineSpacingExtra="8sp"
                     android:text="@string/question"
-                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textColor="@color/logo_fill_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@id/question_index_label"/>
+                <TextView
+                    android:id="@+id/question_index_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/question_index_label"
+                    android:layout_marginStart="30dp"
+                    android:paddingStart="100dp"
+                    android:paddingEnd="100dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/ubuntu_mono"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_brown"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/options_card_view"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                app:cardBackgroundColor="@color/quill_gray"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp"
+                android:id="@+id/option_a_card"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="6dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toTopOf="@id/option_b_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/question_card"
+                app:cardBackgroundColor="@color/app_white" >
+
+                <TextView
+                    android:id="@+id/option_a_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option_a_label"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/ubuntu_mono"
+                    android:textColor="@color/logo_fill_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/option_a_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option_a_text"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/ubuntu_mono"
+                    android:lineSpacingExtra="8sp"
+                    android:textColor="@color/logo_fill_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/option_a_label"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/option_b_card"
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="6dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toTopOf="@id/option_c_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/option_a_card"
+                app:cardBackgroundColor="@color/app_white">
+                <TextView
+                    android:id="@+id/option_b_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option_b_label"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/ubuntu_mono"
+                    android:textColor="@color/logo_fill_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/option_b_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option_b_text"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/ubuntu_mono"
+                    android:lineSpacingExtra="8sp"
+                    android:textColor="@color/logo_fill_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/option_b_label"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/option_c_card"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="6dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toTopOf="@id/option_d_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/option_b_card"
+                app:cardBackgroundColor="@color/app_white">
+
+                <TextView
+                    android:id="@+id/option_c_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option_c_label"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/ubuntu_mono"
+                    android:textColor="@color/logo_fill_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/option_c_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option_c_text"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/ubuntu_mono"
+                    android:lineSpacingExtra="8sp"
+                    android:textColor="@color/logo_fill_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/option_c_label"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/option_d_card"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="6dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toTopOf="@id/option_e_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/option_c_card"
+                app:cardBackgroundColor="@color/app_white">
+
+                <TextView
+                    android:id="@+id/option_d_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option_d_label"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/ubuntu_mono"
+                    android:textColor="@color/logo_fill_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/option_d_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option_d_text"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/ubuntu_mono"
+                    android:lineSpacingExtra="8sp"
+                    android:textColor="@color/logo_fill_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/option_d_label"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/option_e_card"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp"
+                app:cardElevation="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/question_text_card_view">
+                app:layout_constraintTop_toBottomOf="@id/option_d_card"
+                app:cardBackgroundColor="@color/app_white">
 
-                <RadioGroup
-                    android:id="@+id/radioGroup"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/option_e_label"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    app:cardBackgroundColor="@color/splash_color">
+                    android:text="@string/option_e_label"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/ubuntu_mono"
+                    android:textColor="@color/logo_fill_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
-
-                    <RadioButton
-                        android:id="@+id/option_a"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:minHeight="48dp"
-                        android:text="@string/option_a" />
-
-                    <RadioButton
-                        android:id="@+id/option_b"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:minHeight="48dp"
-                        android:text="@string/option_b" />
-
-                    <RadioButton
-                        android:id="@+id/option_c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:minHeight="48dp"
-                        android:text="@string/option_c" />
-
-                    <RadioButton
-                        android:id="@+id/option_d"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:minHeight="48dp"
-                        android:text="@string/option_d" />
-
-                    <RadioButton
-                        android:id="@+id/option_e"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:minHeight="48dp"
-                        android:text="@string/option_e" />
-                </RadioGroup>
+                <TextView
+                    android:id="@+id/option_e_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option_e_text"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/ubuntu_mono"
+                    android:lineSpacingExtra="8sp"
+                    android:textColor="@color/logo_fill_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/option_e_label"
+                    app:layout_constraintTop_toTopOf="parent"/>
             </androidx.cardview.widget.CardView>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>

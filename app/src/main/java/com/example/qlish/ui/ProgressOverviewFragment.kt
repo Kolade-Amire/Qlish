@@ -5,11 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.qlish.databinding.FragmentSignUpBinding
+import com.example.qlish.databinding.FragmentProgressOverviewBinding
 
-
-class SignUpFragment : Fragment() {
-    private var _binding: FragmentSignUpBinding? = null
+class ProgressOverviewFragment : Fragment() {
+    private var _binding: FragmentProgressOverviewBinding? = null
 
     private val binding get() = _binding!!
 
@@ -22,7 +21,7 @@ class SignUpFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentSignUpBinding.inflate(inflater, container, false)
+        _binding = FragmentProgressOverviewBinding.inflate(inflater, container, false)
         return binding.root
     }
 }
