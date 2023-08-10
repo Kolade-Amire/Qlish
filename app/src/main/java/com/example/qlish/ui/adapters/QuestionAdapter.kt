@@ -13,12 +13,6 @@ class QuestionAdapter(val context: Context, val question: List<Question>) :
 
     inner class ViewHolder(binding: QuestionListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        val questionText = binding.questionText
-        val optionA = binding.optionA
-        val optionB = binding.optionB
-        val optionC = binding.optionC
-        val optionD = binding.optionD
-        val optionE = binding.optionE
 
         var notePosition = 0
 
@@ -35,12 +29,7 @@ class QuestionAdapter(val context: Context, val question: List<Question>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.questionText.text = question[position].questionBody
-        holder.optionA.text = question[position].options["A"]
-        holder.optionB.text = question[position].options["B"]
-        holder.optionC.text = question[position].options["C"]
-        holder.optionD.text = question[position].options["D"]
-        holder.optionE.text = question[position].options["E"]
+
     }
 
     override fun getItemCount() = question.size

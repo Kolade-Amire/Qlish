@@ -1,10 +1,320 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/logo_fill"
     tools:context="com.example.qlish.ui.DashboardFragment">
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/takeATest_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardElevation="15dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#115B7D"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@id/wordOfTheDay_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/test_history_card"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:focusable="true">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/image_test"
+                android:layout_width="123dp"
+                android:layout_height="104dp"
+                android:layout_margin="30dp"
+                android:contentDescription="@string/action_take_a_test_text"
+                android:src="@drawable/ic_take_test"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/app_white"/>
+
+            <TextView
+                android:id="@+id/textView_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_mono"
+                android:text="@string/text_takeATest"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/app_white"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_test"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/test_history_card"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        app:cardElevation="15dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#A4362D"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@id/daily_tasks_card"
+        app:layout_constraintStart_toEndOf="@id/takeATest_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/image_testHistory"
+                android:layout_width="94dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/action_take_a_test_text"
+                android:src="@drawable/ic_test_history"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/app_white" />
+
+            <TextView
+                android:id="@+id/textView_testHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_mono"
+                android:text="@string/text_test_history"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/app_white"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_testHistory"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/wordOfTheDay_card"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        app:cardElevation="15dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#745353"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@id/daily_tips_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/daily_tasks_card"
+        app:layout_constraintTop_toBottomOf="@id/takeATest_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/image_dailyWord"
+                android:layout_width="94dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/action_take_a_test_text"
+                android:src="@drawable/ic_daily_word"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/app_white" />
+
+            <TextView
+                android:id="@+id/textView_dailyWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_mono"
+                android:text="@string/text_word_of_the_day"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="10dp"
+                android:textColor="@color/app_white"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_dailyWord"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/daily_tasks_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardElevation="15dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#4D4A4A"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@id/progress_overview_card"
+        app:layout_constraintStart_toEndOf="@id/wordOfTheDay_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/test_history_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/image_dailyChallenge"
+                android:layout_width="123dp"
+                android:layout_height="104dp"
+                android:layout_margin="30dp"
+                android:contentDescription="@string/action_take_a_test_text"
+                android:src="@drawable/ic_challenge"
+                android:paddingBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/app_white"/>
+
+            <TextView
+                android:id="@+id/textView_dailyChallenge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_mono"
+                android:text="@string/text_daily_challenge"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/app_white"
+                android:textAlignment="center"
+                android:lineSpacingExtra="15dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_dailyChallenge"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/daily_tips_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardElevation="15dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#576730"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/progress_overview_card"
+        app:layout_constraintTop_toBottomOf="@id/wordOfTheDay_card">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/image_tips"
+                android:layout_width="123dp"
+                android:layout_height="104dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/action_take_a_test_text"
+                android:src="@drawable/ic_tips"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/app_white"/>
+
+            <TextView
+                android:id="@+id/textView_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_mono"
+                android:text="@string/text_grammar_vocabulary_tips"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/app_white"
+                android:textAlignment="center"
+                android:lineSpacingExtra="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_tips"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/progress_overview_card"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:cardElevation="15dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#AF764B"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/daily_tips_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/daily_tasks_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/image_progress_overview"
+                android:layout_width="94dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/action_take_a_test_text"
+                android:src="@drawable/ic_progress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/app_white" />
+
+            <TextView
+                android:id="@+id/textView_progress_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_mono" android:text="@string/text_progress_performance_overview"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/app_white"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_progress_overview"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

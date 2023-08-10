@@ -18,5 +18,15 @@
     <string name="text_previous">Previous</string>
     <string name="text_next">Next</string>
     <string name="text_submit">Submit</string>
+    <string name="action_home_text">Home</string>
+    <string name="action_take_a_test_text">Test</string>
+    <string name="action_profile_text">Profile</string>
+    <string name="action_settings_text">Settings</string>
+    <string name="text_takeATest">Take a Test</string>
+    <string name="text_test_history">Test History</string>
+    <string name="text_word_of_the_day">Word of the Day</string>
+    <string name="text_daily_challenge">Daily Challenge</string>
+    <string name="text_grammar_vocabulary_tips"><![CDATA[Grammar & Vocabulary Tips]]></string>
+    <string name="text_progress_performance_overview"><![CDATA[Progress & Performance Overview]]></string>
 
 </resources>
