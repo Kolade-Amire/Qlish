@@ -7,6 +7,27 @@
     android:background="@color/logo_fill"
     tools:context="com.example.qlish.ui.DashboardFragment">
 
+
+
+        <TextView
+            android:id="@+id/header_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/takeATest_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/hello_user_text"
+            android:textAlignment="textStart"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            app:drawableEndCompat="@drawable/icon_profile_outlined"
+
+            />
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/takeATest_card"
         android:layout_width="0dp"
@@ -18,7 +39,7 @@
         app:layout_constraintBottom_toTopOf="@id/wordOfTheDay_card"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/test_history_card"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_textView"
         android:clickable="true"
         android:focusable="true">
 
@@ -73,7 +94,7 @@
         app:layout_constraintBottom_toTopOf="@id/daily_tasks_card"
         app:layout_constraintStart_toEndOf="@id/takeATest_card"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/header_textView">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
@@ -242,7 +263,7 @@
                 android:layout_marginTop="20dp"
                 android:contentDescription="@string/action_take_a_test_text"
                 android:src="@drawable/ic_tips"
-                android:paddingBottom="10dp"
+                android:paddingBottom="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -258,7 +279,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/app_white"
                 android:textAlignment="center"
-                android:lineSpacingExtra="15dp"
+                android:lineSpacingExtra="10dp"
+                android:layout_marginBottom="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

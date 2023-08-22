@@ -70,8 +70,8 @@
         android:label="fragment_take_a_test"
         tools:layout="@layout/fragment_take_a_test" >
         <action
-            android:id="@+id/action_takeATest_to_testFragment"
-            app:destination="@id/testFragment" />
+            android:id="@+id/action_takeATest_to_questionConfigFragment"
+            app:destination="@id/questionConfigFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -107,4 +107,13 @@
         android:name="com.example.qlish.ui.ProgressOverviewFragment"
         android:label="fragment_progress_overview"
         tools:layout="@layout/fragment_progress_overview" />
+    <fragment
+        android:id="@+id/questionConfigFragment"
+        android:name="com.example.qlish.QuestionConfigFragment"
+        android:label="fragment_question_config"
+        tools:layout="@layout/fragment_question_config" >
+        <action
+            android:id="@+id/action_questionConfigFragment_to_testFragment"
+            app:destination="@id/testFragment" />
+    </fragment>
 </navigation>

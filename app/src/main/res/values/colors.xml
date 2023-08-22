@@ -6,7 +6,8 @@
     <color name="app_white">#F9F6F6</color>
     <color name="logo_fill">#F4F0E5</color>
     <color name="logo_fill_dark">#545454</color>
-    <color name="logo_fill_dark_faded">#5F5E5E</color>
+    <color name="logo_fill_dark_faded">#A29F9F</color>
     <color name="app_brown">#988270</color>
+    <color name="app_blue">#606C84</color>
 
 </resources>

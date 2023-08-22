@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/logo_fill"
+    tools:context=".QuestionConfigFragment">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/questionCount_config"
+        style="@style/largeCardStyle"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="10dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@id/questionLevel_config"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/logo_fill_dark_faded">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/questionCount_config_header"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="@color/app_blue"
+                app:layout_constraintBottom_toTopOf="@id/questionCount_spinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/logo_fill_dark_faded"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    style="@style/appTextStyleLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_choose_test_count"
+                    android:textColor="@color/logo_fill"
+                    android:textStyle="normal"
+                    android:textAlignment="center"
+                    android:layout_marginTop="40dp"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Spinner
+                android:id="@+id/questionCount_spinner"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/questionCount_config_header" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/questionLevel_config"
+        style="@style/largeCardStyle"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="10dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@id/questionLevel_config"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/questionCount_config"
+        app:strokeColor="@color/logo_fill_dark_faded">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/questionLevel_config_header"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="@color/app_blue"
+                app:layout_constraintBottom_toTopOf="@id/questionLevel_spinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/logo_fill_dark_faded"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    style="@style/appTextStyleLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_choose_test_level"
+                    android:textColor="@color/logo_fill"
+                    android:textStyle="normal"
+                    android:textAlignment="center"
+                    android:layout_marginTop="40dp"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Spinner
+                android:id="@+id/questionLevel_spinner"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/questionLevel_config_header" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <Button
+        android:id="@+id/button_startTest"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/app_blue"
+        android:text="@string/text_start_test"
+        android:textAllCaps="false"
+        android:textColor="@color/logo_fill"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

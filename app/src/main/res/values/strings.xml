@@ -28,5 +28,16 @@
     <string name="text_daily_challenge">Daily Challenge</string>
     <string name="text_grammar_vocabulary_tips"><![CDATA[Grammar & Vocabulary Tips]]></string>
     <string name="text_progress_performance_overview"><![CDATA[Progress & Performance Overview]]></string>
+    <string name="hello_user_text">Hello, user</string>
+    <string name="text_grammar">Grammar</string>
+    <string name="text_vocabulary">Vocabulary</string>
+    <string name="text_random">Random</string>
+    <string name="option_1_generic">option 1</string>
+    <string name="option_2_generic">option 2</string>
+    <string name="option_3_generic">option 3</string>
+    <string name="option_4_generic">option 4</string>
+    <string name="text_choose_test_count">Choose question count</string>
+    <string name="text_start_test">Start Test</string>
+    <string name="text_choose_test_level">Choose test level</string>
 
 </resources>
