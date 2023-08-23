@@ -39,5 +39,32 @@
     <string name="text_choose_test_count">Choose question count</string>
     <string name="text_start_test">Start Test</string>
     <string name="text_choose_test_level">Choose test level</string>
+    <string name="label_fragment_dashboard">Dashboard</string>
+    <string name="label_fragment_onboarding">Welcome</string>
+    <string name="label_fragment_signIn">Sign in</string>
+    <string name="label_fragment_settings">Settings</string>
+    <string name="label_fragment_test">Test</string>
+    <string name="label_fragment_profile">Profile</string>
+    <string name="label_fragment_takeATest">Take a test</string>
+    <string name="label_fragment_signUp">Sign up</string>
+    <string name="label_fragment_testHistory">Test history</string>
+    <string name="label_fragment_dashboard_dailyWord">Word of the day</string>
+    <string name="label_fragment_dailyTips">Daily tips</string>
+    <string name="label_fragment_dailyTasks">Daily challenge</string>
+    <string name="label_fragment_progress_overview">Progress overview</string>
+    <string name="label_fragment_question_config">Test preferences</string>
+
+    <string-array name="question_count_items">
+        <item>15</item>
+        <item>25</item>
+        <item>35</item>
+        <item>50</item>
+    </string-array>
+
+    <string-array name="question_level_items">
+        <item>Elementary</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+    </string-array>
 
 </resources>

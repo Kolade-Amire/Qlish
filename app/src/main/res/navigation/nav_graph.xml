@@ -7,17 +7,17 @@
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.example.qlish.ui.DashboardFragment"
-        android:label="fragment_dashboard"
+        android:label="@string/label_fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" >
         <action
-            android:id="@+id/action_dashboardFragment_to_takeATest2"
-            app:destination="@id/takeATest" />
+            android:id="@+id/action_dashboardFragment_to_takeATest"
+            app:destination="@id/takeATest"/>
         <action
             android:id="@+id/action_dashboardFragment_to_wordOfTheDayFragment"
-            app:destination="@id/wordOfTheDayFragment" />
+            app:destination="@id/wordOfTheDayFragment"/>
         <action
             android:id="@+id/action_dashboardFragment_to_testHistoryFragment"
-            app:destination="@id/testHistoryFragment" />
+            app:destination="@id/testHistoryFragment"/>
         <action
             android:id="@+id/action_dashboardFragment_to_progressOverviewFragment"
             app:destination="@id/progressOverviewFragment" />
@@ -25,13 +25,13 @@
             android:id="@+id/action_dashboardFragment_to_dailyTipsFragment"
             app:destination="@id/dailyTipsFragment" />
         <action
-            android:id="@+id/action_dashboardFragment_to_dailyTasksFragment2"
+            android:id="@+id/action_dashboardFragment_to_dailyTasksFragment"
             app:destination="@id/dailyTasksFragment" />
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.example.qlish.ui.OnBoardingFragment"
-        android:label="fragment_on_boarding"
+        android:label="@string/label_fragment_onboarding"
         tools:layout="@layout/fragment_on_boarding" >
         <action
             android:id="@+id/action_onBoardingFragment_to_signUpFragment"
@@ -43,7 +43,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.qlish.ui.LoginFragment"
-        android:label="fragment_login"
+        android:label="@string/label_fragment_signIn"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_dashboardFragment"
@@ -52,22 +52,22 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.qlish.ui.SettingsFragment"
-        android:label="fragment_settings"
+        android:label="@string/label_fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/testFragment"
         android:name="com.example.qlish.ui.TestFragment"
-        android:label="fragment_test"
-        tools:layout="@layout/fragment_test" />
+        android:label="@string/label_fragment_test"
+        tools:layout="@layout/fragment_test"/>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.qlish.ui.ProfileFragment"
-        android:label="fragment_profile"
+        android:label="@string/label_fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/takeATest"
         android:name="com.example.qlish.ui.TakeATest"
-        android:label="fragment_take_a_test"
+        android:label="@string/label_fragment_takeATest"
         tools:layout="@layout/fragment_take_a_test" >
         <action
             android:id="@+id/action_takeATest_to_questionConfigFragment"
@@ -76,7 +76,7 @@
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.qlish.ui.SignUpFragment"
-        android:label="fragment_sign_up"
+        android:label="@string/label_fragment_signUp"
         tools:layout="@layout/fragment_sign_up" >
         <action
             android:id="@+id/action_signUpFragment_to_dashboardFragment"
@@ -85,35 +85,35 @@
     <fragment
         android:id="@+id/testHistoryFragment"
         android:name="com.example.qlish.ui.TestHistoryFragment"
-        android:label="fragment_test_history"
+        android:label="@string/label_fragment_testHistory"
         tools:layout="@layout/fragment_test_history" />
     <fragment
         android:id="@+id/wordOfTheDayFragment"
         android:name="com.example.qlish.ui.WordOfTheDayFragment"
-        android:label="fragment_word_of_the_day"
+        android:label="@string/label_fragment_dashboard_dailyWord"
         tools:layout="@layout/fragment_word_of_the_day" />
     <fragment
         android:id="@+id/dailyTipsFragment"
         android:name="com.example.qlish.ui.DailyTipsFragment"
-        android:label="fragment_daily_tips"
+        android:label="@string/label_fragment_dailyTips"
         tools:layout="@layout/fragment_daily_tips" />
     <fragment
         android:id="@+id/dailyTasksFragment"
         android:name="com.example.qlish.ui.DailyTasksFragment"
-        android:label="fragment_daily_tasks"
+        android:label="@string/label_fragment_dailyTasks"
         tools:layout="@layout/fragment_daily_tasks" />
     <fragment
         android:id="@+id/progressOverviewFragment"
         android:name="com.example.qlish.ui.ProgressOverviewFragment"
-        android:label="fragment_progress_overview"
+        android:label="@string/label_fragment_progress_overview"
         tools:layout="@layout/fragment_progress_overview" />
     <fragment
         android:id="@+id/questionConfigFragment"
-        android:name="com.example.qlish.QuestionConfigFragment"
-        android:label="fragment_question_config"
+        android:name="com.example.qlish.ui.QuestionConfigFragment"
+        android:label="@string/label_fragment_question_config"
         tools:layout="@layout/fragment_question_config" >
         <action
             android:id="@+id/action_questionConfigFragment_to_testFragment"
-            app:destination="@id/testFragment" />
+            app:destination="@id/testFragment"/>
     </fragment>
 </navigation>
