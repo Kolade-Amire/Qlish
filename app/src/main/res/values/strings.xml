@@ -67,4 +67,16 @@
         <item>Advanced</item>
     </string-array>
 
+    <string-array name="question_topic_item">
+        <item>Parts of Speech</item>
+        <item>Sentence Completion</item>
+        <item>Tenses</item>
+        <item>Antonyms</item>
+        <item>Synonyms</item>
+        <item>Paragraph</item>
+        <item>Phrasal Verbs</item>
+        <item>Reading Comprehension</item>
+
+    </string-array>
+
 </resources>

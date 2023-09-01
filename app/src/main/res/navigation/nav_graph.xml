@@ -71,7 +71,7 @@
         tools:layout="@layout/fragment_take_a_test" >
         <action
             android:id="@+id/action_takeATest_to_questionConfigFragment"
-            app:destination="@id/questionConfigFragment" />
+            app:destination="@id/questionConfigFragment"/>
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -115,5 +115,9 @@
         <action
             android:id="@+id/action_questionConfigFragment_to_testFragment"
             app:destination="@id/testFragment"/>
+        <argument
+            android:name="questionClass"
+            app:argType="string"
+            android:defaultValue="grammar" />
     </fragment>
 </navigation>

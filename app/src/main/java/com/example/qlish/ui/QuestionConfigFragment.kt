@@ -21,6 +21,10 @@ class QuestionConfigFragment : Fragment(), AdapterView.OnItemSelectedListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //get bundle
+
+
+
         val questionCountSpinner: Spinner = binding.questionCountSpinner
         questionCountSpinner.onItemSelectedListener = this
         val questionLevelSpinner: Spinner = binding.questionLevelSpinner
@@ -46,6 +50,10 @@ class QuestionConfigFragment : Fragment(), AdapterView.OnItemSelectedListener{
             questionLevelSpinner.adapter = adapter
         }
 
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
     override fun onCreateView(
