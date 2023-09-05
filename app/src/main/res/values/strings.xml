@@ -53,6 +53,11 @@
     <string name="label_fragment_dailyTasks">Daily challenge</string>
     <string name="label_fragment_progress_overview">Progress overview</string>
     <string name="label_fragment_question_config">Test preferences</string>
+    <string name="question_count_label">Question Count</string>
+    <string name="question_level_label">Question Level</string>
+    <string name="question_topic_label">Question Topic</string>
+    <string name="dropdown_arrow_content_desc">dropdown arrow</string>
+    <string name="text_choose_test_topic">Choose test topic</string>
 
     <string-array name="question_count_items">
         <item>15</item>
