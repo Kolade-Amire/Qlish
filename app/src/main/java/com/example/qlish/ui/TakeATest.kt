@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.example.qlish.R
+import com.example.qlish.data.configData
 import com.example.qlish.databinding.FragmentDashboardBinding
 import com.example.qlish.databinding.FragmentTakeATestBinding
 
@@ -34,20 +35,24 @@ class TakeATest : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        //navController
         val navController = findNavController()
-        val action = TakeATestDirections.actionTakeATestToQuestionConfigFragment()
+
+
 
         binding.actionGrammar.setOnClickListener {
-            action.arguments.putString("question_class", "grammar")
-            navController.navigate(action)
+            navController.navigate(TakeATestDirections.actionTakeATestToQuestionConfigFragment(
+                configData["Grammar"].toString()))
         }
         binding.actionVocabulary.setOnClickListener {
-            action.arguments.putString("question_class", "vocabulary")
-            navController.navigate(action)
+            navController.navigate(TakeATestDirections.actionTakeATestToQuestionConfigFragment(
+                configData["Vocabulary"].toString()))
 
         }
         binding.actionRandom.setOnClickListener {
-            action.arguments.putString("question_class", "random")
+            navController.navigate(TakeATestDirections.actionTakeATestToQuestionConfigFragment(
+                configData["Random"].toString()))
         }
     }
 

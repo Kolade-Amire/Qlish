@@ -1,186 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    tools:context=".ui.QuestionConfigFragment">
 
-
-    <androidx.core.widget.NestedScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_height="match_parent"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/questionCountLayout"
         android:layout_width="match_parent"
-        tools:context=".ui.QuestionConfigFragment"
-        android:background="@color/white"
-        >
-    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/questionLevelLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="2">
+
+        <TextView
+            android:id="@+id/questionCountHeader"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/app_grey"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:text="@string/question_count_label"
+            android:textColor="@color/text_color_dark"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/text_choose_test_count"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_dark_faded"
+            android:textSize="18sp" />
+
+        <NumberPicker
+            android:id="@+id/numberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/default_app_margin"
+            android:layout_weight="2" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/questionLevelLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/questionTopicLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/questionCountLayout"
+        app:layout_constraintVertical_weight="2">
 
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/questionCountLayout"
+        <TextView
+            android:id="@+id/questionLevelHeader"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@id/questionLevelLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/app_grey"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:text="@string/question_level_label"
+            android:textColor="@color/logo_fill_dark"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/questionCountHeader"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:background="@color/app_grey"
-                android:gravity="center_vertical"
-                android:paddingStart="20dp"
-                android:paddingEnd="0dp"
-                android:text="@string/question_count_label"
-                android:textColor="@color/text_color_dark"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/text_choose_test_count"
-                android:textColor="@color/text_color_dark_faded"
-                android:textSize="18sp" />
-
-            <NumberPicker
-                android:id="@+id/numberPicker"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/default_app_margin"
-                android:layout_weight="2" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/questionLevelLayout"
+        <TextView
+            android:id="@+id/level_instruction_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@id/questionTopicLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/questionCountLayout">
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/text_choose_test_level"
+            android:textColor="@color/text_color_dark_faded"
+            android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/questionLevelHeader"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:background="@color/app_grey"
-                android:gravity="center_vertical"
-                android:paddingStart="20dp"
-                android:paddingEnd="0dp"
-                android:text="@string/question_level_label"
-                android:textColor="@color/logo_fill_dark"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/text_choose_test_level"
-                android:textColor="@color/text_color_dark_faded"
-                android:textSize="18sp" />
-
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/questionLevelSpinner"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:layout_margin="30dp"
-                android:layout_weight="2"
-                android:background="@drawable/app_grey_outline"
-                android:contentDescription="@string/text_choose_test_level"
-                android:popupBackground="@drawable/app_grey_outline"
-                android:spinnerMode="dropdown"
-                tools:listitem="@layout/spinner_item" />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/questionTopicLayout"
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/questionLevelSpinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/questionLevelLayout">
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:layout_weight="2"
+            android:background="@drawable/app_grey_outline"
+            android:contentDescription="@string/text_choose_test_level"
+            android:popupBackground="@drawable/app_grey_outline"
+            android:spinnerMode="dropdown"
+            tools:listitem="@layout/spinner_item"
+            />
 
-            <TextView
-                android:id="@+id/questionTopicHeader"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:background="@color/app_grey"
-                android:gravity="center_vertical"
-                android:paddingStart="20dp"
-                android:paddingEnd="0dp"
-                android:text="@string/question_topic_label"
-                android:textColor="@color/text_color_dark"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/text_choose_test_topic"
-                android:textColor="@color/text_color_dark_faded"
-                android:textSize="18sp" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/questionTopicLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/buttonLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/questionLevelLayout"
+        app:layout_constraintVertical_weight="2"
+        android:visibility="invisible">
 
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/questionTopicSpinner"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:layout_margin="30dp"
-                android:layout_weight="2"
-                android:background="@drawable/app_grey_outline"
-                android:contentDescription="@string/text_choose_test_topic"
-                android:popupBackground="@drawable/app_grey_outline"
-                android:spinnerMode="dropdown"
-                tools:listitem="@layout/spinner_item" />
+        <TextView
+            android:id="@+id/questionTopicHeader"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/app_grey"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:text="@string/question_topic_label"
+            android:textColor="@color/text_color_dark"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/text_choose_test_topic"
+            android:textColor="@color/text_color_dark_faded"
+            android:textSize="18sp" />
 
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/questionTopicSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:layout_weight="2"
+            android:background="@drawable/app_grey_outline"
+            android:contentDescription="@string/text_choose_test_topic"
+            android:popupBackground="@drawable/app_grey_outline"
+            android:spinnerMode="dropdown"
+            tools:listitem="@layout/spinner_item"
+             />
 
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/questionTopicLayout"
+        app:layout_constraintVertical_weight="0.5">
 
         <Button
             android:id="@+id/button_startTest"
             android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_height="70dp"
             android:backgroundTint="@color/logo_fill_dark"
+            android:gravity="center"
             android:text="@string/text_start_test"
             android:textAllCaps="false"
             android:textColor="@color/logo_fill"
             android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@id/questionTopicLayout"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-        </Button>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

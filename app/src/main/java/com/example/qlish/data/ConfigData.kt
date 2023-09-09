@@ -1,5 +1,6 @@
 package com.example.qlish.data
 
+val questionCountList = arrayOf("15","25","35","50")
 
 val configData = mapOf(
     "Grammar" to "grammar",
